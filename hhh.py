@@ -5,8 +5,8 @@ import os
 load_dotenv()
 GROQ_API_KEY = os.getenv("GROQ_API_KEY")# Replace with your actual key
 
-print("KEY VALUE:", GROQ_API_KEY)
-print("KEY LENGTH:", len(GROQ_API_KEY) if GROQ_API_KEY else "None")
+# print("KEY VALUE:", GROQ_API_KEY)
+# print("KEY LENGTH:", len(GROQ_API_KEY) if GROQ_API_KEY else "None")
 
 
 headers = {
