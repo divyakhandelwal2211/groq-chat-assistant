@@ -1,139 +1,102 @@
-# 🤖 Groq Chat App (LLaMA 3 Powered)
+# 🤖 Groq Streamlit Chatbot
 
-An AI-powered chatbot built using **Streamlit** and **Groq’s LLaMA 3 model**, supporting multiple chat sessions, role-based chat modes, and persistent chat history.
+An AI-powered chatbot built using **Groq LLM** and **Streamlit**, featuring multiple chat modes, chat history persistence, and secure API key management.  
+The application is deployed on **Streamlit Cloud** and the source code is maintained on **GitHub**.
 
 ---
 
-## 🚀 Features
+## 🚀 Live Demo
+🔗 https://groq-chat-assistant.streamlit.app
 
-- 💬 Chatbot powered by **LLaMA 3 (70B)** on Groq
+---
+
+## 📌 Features
+- 💬 Interactive AI chatbot powered by **Groq LLM**
 - 🧠 Multiple chat modes:
-  - Default Assistant
-  - ML Tutor
+  - Default Assistant  
+  - ML Tutor  
   - Python Helper
-- 📁 Persistent chat sessions (saved as JSON)
-- 🔄 Resume previous conversations from sidebar
-- ⚡ Fast inference using Groq API
-- 🔐 Secure API key handling using `.env`
+- 📚 Persistent chat history (saved locally)
+- 🔐 Secure API key handling using environment variables
+- ⚡ Fast and responsive UI using Streamlit
+- ☁️ Deployed on Streamlit Cloud
 
 ---
 
-## 🏗️ Project Structure
-
-├── main.py # Streamlit UI and app logic
-├── chat.py # Groq API interaction
-├── session_utils.py # Chat save/load utilities
-├── test.py # API testing script
-├── hhh.py # Experimental API practice script
-├── chat_sessions/ # Stored chat history (JSON files)
-├── .env # Environment variables (not uploaded)
-└── README.md
-
-yaml
-Copy code
+## 🛠️ Tech Stack
+- **Python**
+- **Streamlit**
+- **Groq API**
+- **Requests**
+- **python-dotenv**
+- **Git & GitHub**
 
 ---
 
-## 🧠 How the App Works
-
-1. User enters a message in the Streamlit UI  
-2. `main.py` handles UI and session state  
-3. Messages are sent to Groq via `chat.py`  
-4. Groq’s LLaMA model generates a response  
-5. Chat history is saved using `session_utils.py`  
-6. User can resume chats from the sidebar  
-
----
-
-## 🔑 API Setup (Groq)
-
-1. Create an account at **https://console.groq.com**
-2. Generate an API key
-3. Create a `.env` file in the project root:
-
-GROQ_API_KEY=your_api_key_here
-
-yaml
-Copy code
-
-⚠️ Never commit `.env` to GitHub
+## 📂 Project Structure
+Groq_Chat_App/
+│
+├── main.py # Streamlit app entry point
+├── chat.py # Groq API interaction logic
+├── session_utils.py # Session & chat history handling
+├── requirements.txt # Project dependencies
+├── README.md # Project documentation
+├── .gitignore # Ignored files & folders
+└── venv/ # Virtual environment (local only)
 
 ---
 
-## ▶️ How to Run the App
+## ⚙️ How to Run Locally
 
-### 1️⃣ Install dependencies
+### 1️⃣ Clone the repository
 ```bash
-pip install streamlit requests python-dotenv
-2️⃣ Run the chatbot
+git clone https://github.com/divyakhandelwal2211/groq-chat-assistant.git
+cd groq-chat-assistant
+2️⃣ Create & activate virtual environment
 bash
 Copy code
+python -m venv venv
+venv\Scripts\activate
+3️⃣ Install dependencies
+bash
+Copy code
+pip install -r requirements.txt
+4️⃣ Set environment variable
+Create a .env file in the project root:
+
+env
+
+GROQ_API_KEY=your_groq_api_key_here
+5️⃣ Run the app
+
 streamlit run main.py
-The app will open at:
+🔐 Security Notes
+API keys are never hardcoded
 
-arduino
-Copy code
-http://localhost:8501
-🧪 Running Test Scripts
-Run API test script
-bash
-Copy code
-python test.py
-Run experimental script
-bash
-Copy code
-python hhh.py
-These scripts are standalone and not part of the main app flow.
+.env, venv, .vscode, and __pycache__ are excluded using .gitignore
 
-🧩 Chat Modes Explained
-Default → General-purpose assistant
+Streamlit Secrets are used for deployment
 
-ML Tutor → Explains Machine Learning concepts with examples
+🌐 Deployment
+The application is deployed using Streamlit Cloud and connected directly to the GitHub repository.
 
-Python Helper → Debugging and step-by-step Python explanations
+💡 Future Enhancements
+Gemini-based chatbot version
 
-📦 Technologies Used
-Python
+Database-backed chat history
 
-Streamlit
+Authentication system
 
-Groq API
-
-LLaMA 3
-
-Requests
-
-JSON
-
-python-dotenv
-
-🎯 Learning Outcomes
-API integration with Large Language Models (LLMs)
-
-Secure credential management using environment variables
-
-Streamlit session state handling
-
-Modular project architecture
-
-Persistent data storage using JSON
-
-📌 Notes
-test.py and hhh.py were used during development for testing and experimentation
-
-Core application files:
-
-main.py
-
-chat.py
-
-session_utils.py
+UI/UX improvements
 
 👩‍💻 Author
 Divya Khandelwal
-Final Year B.Tech Student
-AI & Data Analytics Enthusiast
+Final-year B.Tech student | Aspiring Data & AI Professional
 
+⭐ Acknowledgements
+Groq for providing fast LLM inference
+
+Streamlit for seamless app deployment
 
 ## 🚀 Live Demo
 🔗 https://groq-chat-assistant.streamlit.app
